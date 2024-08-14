@@ -11,11 +11,14 @@
     "solady": "^0.0.232"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@prb/test": "^0.6.4",
+    "codecov": "^3.8.3",
     "forge-std": "github:foundry-rs/forge-std#v1.8.1",
-    "prettier": "^3.0.0",
-    "solhint": "^3.6.2",
     "husky": "^9.1.4",
-    "codecov": "^3.8.3"
+    "prettier": "^3.0.0",
+    "solhint": "^3.6.2"
   },
   "keywords": [
     "blockchain",
@@ -29,7 +32,7 @@
   "private": true,
   "scripts": {
     "prepare": "husky && bun setup:hooks",
-    "setup:hooks": "echo 'bun run test' > .husky/_/pre-commit && echo 'bun run check-branch-name && bun run lint:fix' > .husky/_/pre-push && echo 'bun run check-branch-name && bun install && forge install' > .husky/_/post-checkout && echo 'bun --no-install commitlint --edit \"$1\"' > .husky/_/commit-msg",
+    "setup:hooks": "echo 'bun run test' > .husky/_/pre-commit && echo 'bun run check-branch-name && bun run lint:fix' > .husky/_/pre-push && echo 'bun run check-branch-name && bun install && forge install' > .husky/_/post-checkout && echo 'npx --no-install commitlint --edit \"$1\"' > .husky/_/commit-msg",
     "clean": "rm -rf cache out coverage.json",
     "build": "forge build",
     "lint": "bun run lint:sol && bun run prettier:check",
