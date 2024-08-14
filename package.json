@@ -40,17 +40,15 @@
     "prepare": "husky",
     "clean:forge": "forge clean",
     "test:gas": "forge test --gas-report",
-    "gas-report": "node scripts/foundry/generateGasReport.js",
     "coverage": "forge coverage --ir-minimum",
     "coverage:report": "scripts/foundry/generate_coverage_report.sh",
     "deploy:forge": "forge script scripts/solidity/Deploy.s.sol --broadcast --rpc-url http://localhost:8545",
-    "lint:fix": "bun prettier --write 'contracts/**/*.sol' && bun solhint 'contracts/**/*.sol' --fix --noPrompt",
-    "check-branch-name": "node scripts/git-hooks/checkBranchNames.js",
-    "generate-and-push-gas-report": "bun run gas-report && git add gas_report.md && git commit -m 'Update gas report' || echo 'No changes to gas report'"
+    "lint:fix": "bun prettier --write '**/*.{json,md,yml}' && bun solhint '{script,src,test}/**/*.sol' --fix && forge fmt --fix",
+    "check-branch-name": "node .github/scripts/checkBranchNames.js"
   },
   "husky": {
     "hooks": {
-      "pre-push": "bun run check-branch-name && bun run lint:fix && bun run generate-and-push-gas-report",
+      "pre-push": "bun run check-branch-name && bun run lint:fix",
       "post-checkout": "bun run check-branch-name && bun install && forge install"
     }
   }
