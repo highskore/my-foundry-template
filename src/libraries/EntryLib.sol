@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.8.25;
 
-/// @title A library that contains utility functions
+/// @title Entry library
+/// @notice A library that contains utility functions
 library EntryLib {
     /// @notice A utility function that adds two numbers
     /// @param a The first number
