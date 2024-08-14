@@ -31,7 +31,7 @@
   ],
   "private": true,
   "scripts": {
-    "prepare": "husky && bun setup:hooks",
+    "prepare": "husky",
     "setup:hooks": "echo 'bun run test' > .husky/_/pre-commit && echo 'bun run check-branch-name && bun run lint:fix' > .husky/_/pre-push && echo 'bun run check-branch-name && bun install && forge install' > .husky/_/post-checkout && echo 'npx --no-install commitlint --edit \"$1\"' > .husky/_/commit-msg",
     "clean": "rm -rf cache out coverage.json",
     "build": "forge build",
