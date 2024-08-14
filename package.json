@@ -11,9 +11,9 @@
     "solady": "^0.0.232"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^19.2.2",
     "@prb/test": "^0.6.4",
     "codecov": "^3.8.3",
-    "commitlint": "^19.4.0",
     "forge-std": "github:foundry-rs/forge-std#v1.8.1",
     "husky": "^9.1.4",
     "prettier": "^3.0.0",
