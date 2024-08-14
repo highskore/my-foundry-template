@@ -19,7 +19,7 @@ contract Entry_Test is Base_Test {
                                  SETUP
     //////////////////////////////////////////////////////////////*/
 
-    function setUp() internal override {
+    function setUp() public virtual override {
         super.setUp();
         entry = new Entry(1);
     }

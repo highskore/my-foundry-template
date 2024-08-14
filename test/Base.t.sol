@@ -12,5 +12,5 @@ abstract contract Base_Test is StdCheats, PRBTest, StdUtils {
                                  SETUP
     //////////////////////////////////////////////////////////////*/
 
-    function setUp() internal virtual { }
+    function setUp() public virtual { }
 }
