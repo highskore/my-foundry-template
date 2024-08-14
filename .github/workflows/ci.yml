@@ -50,7 +50,7 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: "Install Node.js dependencies (cached)"
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: "Lint the code"
         run: "bun run lint"
