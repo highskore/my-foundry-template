@@ -43,7 +43,7 @@
     "coverage": "forge coverage --ir-minimum",
     "coverage:report": "scripts/foundry/generate_coverage_report.sh",
     "deploy:forge": "forge script scripts/solidity/Deploy.s.sol --broadcast --rpc-url http://localhost:8545",
-    "lint:fix": "bun prettier --write '**/*.{json,md,yml}' && bun solhint '{script,src,test}/**/*.sol' --fix && forge fmt --fix",
+    "lint:fix": "bun prettier --write '**/*.{json,md,yml}' && bun solhint '{script,src,test}/**/*.sol' --fix && forge fmt",
     "check-branch-name": "node .github/scripts/checkBranchNames.js"
   },
   "husky": {
