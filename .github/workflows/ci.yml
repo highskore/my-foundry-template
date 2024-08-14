@@ -128,6 +128,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: "Install Bun"
+        uses: "oven-sh/setup-bun@v1"
+
+      - name: "Install the Node.js dependencies"
+        run: "bun install"
+
       - name: Run Slither
         uses: crytic/slither-action@v0.4.0
         id: slither
